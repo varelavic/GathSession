@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.hero {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        &-left {
+            grid-column: 1 / span 1;
+            h1 {
+                color: white;
+                font-family: $tittle-font;
+                font-size: 3.6rem;
+                font-weight: 700;
+                line-height: 3.6rem;
+                margin: 0;
+                margin-bottom: 40px;
+            }
+            p {
+                margin: 0;
+                margin-bottom: 40px;
+                color: $text-color;
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+            }
+        }
+        &-buttons {
+            margin-bottom: 80px;
+            ul {
+                display: flex;
+                gap: 32px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li.learn a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    &:hover {
+                        color: $brand-color;
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+        }
+        &-scores {
+            display: inline-flex;
+            justify-content: space-between;
+            div {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            img {
+                width: 40px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 17px;
+                margin: 0;
+                width: 60%;
+                align-self: center;
+                color: white;
+                line-height: normal;
+            }
+        }
+        &-right {
+            grid-column: 2 / span 1;
+
+            position: relative;
+            background-image: url('/img/ellipse3.png');
+            background-repeat: no-repeat;
+            background-size: 630px;
+            background-position: bottom;
+            z-index: 0;
+
+            div.peoples {
+            position: relative;
+            }
+            .img1 {
+                position: absolute;
+                width: 170px;
+                top: -50px;
+                left: 70px;
+            }
+            .img2 {
+                position: absolute;
+                width: 170px;
+                top: 330px;
+                left: 70px;
+            }
+            .img3 {
+                position: absolute;
+                width: 170px;
+                top: -50px;
+                left: 270px;
+            }
+            .img4 {
+                position: absolute;
+                width: 170px;
+                left: 270px;
+                top: 140px;
+            }
+            .img5 {
+                position: absolute;
+                width: 170px;
+                right: 70px;
+                top: 60px;
+            }
+        }
+    }

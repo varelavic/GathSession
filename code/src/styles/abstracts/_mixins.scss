@@ -39,13 +39,15 @@
   text-align: center;
   align-content: center;
   text-decoration: none;
-  background-color:rgba(38, 64, 101, 1);
+  background-color:$brand-color;
   color: white;
-  width: 100px;
+  width: 150px;
   height: 40px;
-  border-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   &:hover {
-    background-color: $mid-green;
+    background-color: white;
     color: $brand-color;
   }
 }
